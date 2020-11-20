@@ -6,7 +6,7 @@
 * 2 : 备用电池，12V(标称)铅酸蓄电池
 * 3 : 12V电源输出
 * 4 : 自定义按键
-* 5 : BIOS升级接口
+* 5 : EC(Embedded Controller 嵌入式控制器)升级接口
 * 6 : LAN0 默认100Mbps + 24V PoE; 可选:1Gbps, 无PoE
 * 7 - 9 : LAN1 - LAN3, 1Gbps
 * 10 : WAN, 1Gbps
@@ -44,14 +44,14 @@
     4. 听到`3次滴声`后，松开两个按钮。（电源灯表示为闪烁状态）
     5. 检查Host PC是否有一个名为`Nvidia Crop.`的设备
 
-## BIOS升级
+## EC升级
 
 > 针对主板的基础功能控制器的固件升级
 
 * 固件及升级工具： https://github.com/autolaborcenter/EmbeddedProductData
 
 * 进入方法：
-   1. 断开主板的主电源和备用电源，并将主板BIOS的USB typeC接口和Host PC连接；
+   1. 断开主板的主电源和备用电源，并将主板EC对应的USB typeC接口和Host PC连接；
    3. 按下`重启`按钮，插入主板的主电源，听到`5次滴声`后，松开`重启`按钮；
    4. 打开STM32CubeProgrammer，选择UART模式，点击Connect；
    5. 点击Open，选择新固件，点击Download
