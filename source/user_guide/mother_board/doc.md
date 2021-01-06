@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Date: 2020-09-11 18:51:20
+ * @LastEditors: CK.Zh
+ * @LastEditTime: 2021-01-06 16:30:36
+ * @FilePath: \pm1-navigationkit-docs\source\user_guide\mother_board\doc.md
+-->
 # 简介
 
 这是一款以Jetson Nano为计算核心，拥有高可扩展性，面向移动机器人平台的高性能计算机。
@@ -26,8 +33,7 @@
 | *12V输出*    | 单口最大3A </br> 合计4A                           |
 | *24V输出*    | 1A （非标PoE）                                    |
 | *5V输出*     | 单USB口最大3A </br> 合计8A                        |
-
-
+| *待机电流*   | 仅主电源：约5mA </br> 仅备用电池：约500uA       |
 
 
 # 功能描述
@@ -38,12 +44,12 @@
 * 2 : 备用电池，12V(标称)铅酸蓄电池
 * 3 : 12V电源输出
 * 4 : 自定义按键
-* 5 : EC(Embedded Controller 嵌入式控制器)升级接口
+* 5 : EC(Embedded Controller 嵌入式控制器)升级/日志接口（仅Device）
 * 6 : LAN0 默认100Mbps + 24V PoE; 可选:1Gbps, 无PoE
 * 7 - 9 : LAN1 - LAN3, 1Gbps
 * 10 : WAN, 1Gbps
-* 11 : CPU debug 
-* 12 : SOM DFU
+* 11 : SOM 串口终端 （仅Device）
+* 12 : SOM DFU（仅Device）
 * 13 : HDMI 输出
 * 14 - 19 : USB2517, #1 - #6
 * 20 - 21 : RTS5411, #3 - #4
@@ -55,7 +61,7 @@
 
 ## 开机
 
-1. 关机状态下，长按`电源`按钮；
+1. 关机状态下，按下`电源`按钮；
 2. 听到滴声后，松开按钮;
 3. 开机后电源灯为`常亮`状态
 
@@ -67,14 +73,15 @@
 
 ## DFU
 
-> Device Firmware Update , 针对Jetson Nano的固件升级模式
+>  Device Firmware Update, 用于在Linux上使用Nvidia SDK Manager软件,为Jetson Nano 烧写系统或安装JetPack组件。
 
  * 进入方法：
     1. 关机状态；
     2. 按下`重启`按钮；
     3. 按下`电源`按钮；
-    4. 听到`3次滴声`后，松开两个按钮。（电源灯表示为闪烁状态）
-    5. 检查Host PC是否有一个名为`Nvidia Crop.`的设备
+    4. 听到`3次滴声`后，松开两个按钮。（电源灯为`闪烁`状态）
+    5. 检查Host PC是否有一个名为`Nvidia Crop. APX`的设备
+
 
 ## EC升级
 
@@ -86,7 +93,8 @@
    1. 断开主板的主电源和备用电源，并将主板EC对应的USB typeC接口和Host PC连接；
    3. 按下`重启`按钮，插入主板的主电源，听到`5次滴声`后，松开`重启`按钮；
    4. 打开STM32CubeProgrammer，选择UART模式，点击Connect；
-   5. 点击Open，选择新固件，点击Download
+   5. 点击Open，选择新固件，点击Download；
+   6. 下载完成后，断开与主板的主电源以及备用电池，并重新连接电源即可。
 
 
 ## 主电源&备用电源
@@ -99,3 +107,8 @@
 | 已连接 | 未连接 | `主电源` |
 | 未连接 | 已连接 | `备用电源` </br> （该模式下系统续航能力有限，请尽快接入主电源或关机）|
 
+# 常见问题
+
+* “为什么按下开机按钮后蜂鸣器响但是无法开机？”
+  
+  “当主电源电压过低或主电源未插入时，EC将不响应开机请求。”
