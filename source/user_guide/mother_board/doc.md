@@ -2,7 +2,7 @@
  * @Description: 
  * @Date: 2020-09-11 18:51:20
  * @LastEditors: CK.Zh
- * @LastEditTime: 2021-01-07 14:58:05
+ * @LastEditTime: 2021-01-07 15:47:01
  * @FilePath: \pm1-navigationkit-docs\source\user_guide\mother_board\doc.md
 -->
 # 简介
@@ -61,16 +61,24 @@
 
 ## 开机
 
-1. 关机状态下，按下`电源`按钮；
+1. 关机状态下，长按`电源`按钮；
 2. 听到滴声后，松开按钮;
 3. 开机后电源灯为`常亮`状态
 
 ## 关机
+1. 在操作系统中点选关机按钮或键入关机指令，或短按`电源`按钮，触发操作系统弹出`关机对话框`；
+2. 关机后电源灯为`熄灭`状态
+## 强制关机
 
 1. 开机/DFU状态下，长按`电源`按钮；
 2. 听到滴声后，松开按钮;
-3. 关机后电源灯为`熄灭`状态
+3. 关机完成后会再次发出`滴`声；
+4. 关机后电源灯为`熄灭`状态
 
+# 重启
+1. 开机/DFU状态下，长按`重启`按钮；
+2. 听到滴声后，松开按钮；
+3. 系统重新启动
 ## DFU
 
 > Device Firmware Update, 用于在Linux下使用Nvidia SDK Manager软件,为Jetson Nano 烧写系统或安装JetPack组件。
