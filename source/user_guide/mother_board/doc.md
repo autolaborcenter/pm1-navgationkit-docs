@@ -2,7 +2,7 @@
  * @Description: 
  * @Date: 2020-09-11 18:51:20
  * @LastEditors: CK.Zh
- * @LastEditTime: 2021-01-06 16:30:36
+ * @LastEditTime: 2021-01-07 14:58:05
  * @FilePath: \pm1-navigationkit-docs\source\user_guide\mother_board\doc.md
 -->
 # 简介
@@ -73,7 +73,8 @@
 
 ## DFU
 
->  Device Firmware Update, 用于在Linux上使用Nvidia SDK Manager软件,为Jetson Nano 烧写系统或安装JetPack组件。
+> Device Firmware Update, 用于在Linux下使用Nvidia SDK Manager软件,为Jetson Nano 烧写系统或安装JetPack组件。
+> 当Jetson Nano为eMMC（无SD卡）版本或SD卡不便拆装，可以在该模式为Jetson Nano刷机。
 
  * 进入方法：
     1. 关机状态；
