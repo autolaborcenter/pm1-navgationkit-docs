@@ -2,7 +2,7 @@
  * @Description: 
  * @Date: 2020-09-11 18:51:20
  * @LastEditors: CK.Zh
- * @LastEditTime: 2021-01-07 15:47:01
+ * @LastEditTime: 2021-01-07 18:40:28
  * @FilePath: \pm1-navigationkit-docs\source\user_guide\mother_board\doc.md
 -->
 # 简介
@@ -72,10 +72,11 @@
 
 1. 开机/DFU状态下，长按`电源`按钮；
 2. 听到滴声后，松开按钮;
-3. 关机完成后会再次发出`滴`声；
-4. 关机后电源灯为`熄灭`状态
+3. 关机后电源灯为`熄灭`状态
 
-# 重启
+## 重启
+> 仅重启SOM，其它外设正常运行
+
 1. 开机/DFU状态下，长按`重启`按钮；
 2. 听到滴声后，松开按钮；
 3. 系统重新启动
