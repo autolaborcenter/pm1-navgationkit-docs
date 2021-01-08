@@ -100,11 +100,11 @@
 * 固件及升级工具： https://github.com/autolaborcenter/EmbeddedProductData
 
 * 进入方法：
-   1. 断开主板的主电源和备用电源，并将主板EC对应的USB typeC接口和Host PC连接；
-   3. 按下`重启`按钮，插入主板的主电源，听到`5次滴声`后，松开`重启`按钮；
-   4. 打开STM32CubeProgrammer，选择UART模式，点击Connect；
-   5. 点击Open，选择新固件，点击Download；
-   6. 下载完成后，断开与主板的主电源以及备用电池，并重新连接电源即可。
+   1. 断开主板的主电源和备用电源10秒钟以上（使EC彻底断电），并将主板EC对应的USB typeC接口和Host PC连接；
+   2. 先按下`重启`按钮，再插入主板的主电源，听到`5次滴声`后，松开`重启`按钮；
+   3. 打开STM32CubeProgrammer，选择UART模式，点击Connect；
+   4. 点击Open，选择新固件，点击Download；
+   5. 下载完成后，断开与主板的主电源以及备用电池，并重新连接电源即可。
 
 
 ## 主电源&备用电源
