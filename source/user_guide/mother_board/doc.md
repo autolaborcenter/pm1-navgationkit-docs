@@ -82,7 +82,7 @@
 3. 系统重新启动
 ## DFU
 
-> Device Firmware Update, 用于在Linux下使用Nvidia SDK Manager软件,为Jetson Nano 烧写系统或安装JetPack组件。
+> Device Firmware Update, 用于在`Linux`下使用Nvidia SDK Manager软件,为Jetson Nano 烧写系统或安装JetPack组件。
 > 当Jetson Nano为eMMC（无SD卡）版本或SD卡不便拆装，可以在该模式为Jetson Nano刷机。
 
  * 进入方法：
@@ -92,6 +92,8 @@
     4. 听到`3次滴声`后，松开两个按钮。（电源灯为`闪烁`状态）
     5. 检查Host PC是否有一个名为`Nvidia Crop. APX`的设备
 
+* 烧录方法：
+    详见Nvidia官方文档：https://docs.nvidia.com/sdk-manager/index.html
 
 ## EC升级
 
@@ -137,8 +139,9 @@
 
 * USB 
     * 0-11（共12个）USB口提供VBUS供电状态指示灯（红色LED）
-    * 0-8（共8个）USB口提供主机枚举状态指示灯（蓝色LED）
+    * 0-7（共8个）USB口提供主机枚举状态指示灯（蓝色LED）
     * 部分设备可能会在操作系统不访问时进入休眠状态（蓝色LED熄灭）
     * 使用`usbview`（GUI）或`lsusb -t`查看设备信息及工作状态
- 
+ * 电源
+    * 使用电脑接入`MCU-SER`口，并在使用串口调试软件打开该串口，观察日志输出中是否包含电源相关的警告、错误等
 
