@@ -82,7 +82,8 @@
 3. 系统重新启动
 ## DFU
 
-> Device Firmware Update, 用于在`Linux`下使用Nvidia SDK Manager软件,为Jetson Nano 烧写系统或安装JetPack组件。
+> Device Firmware Update, 用于在`Ubuntu`下使用Nvidia SDK Manager软件,为Jetson Nano 烧写系统或安装JetPack组件。
+
 > 当Jetson Nano为eMMC（无SD卡）版本或SD卡不便拆装，可以在该模式为Jetson Nano刷机。
 
  * 进入方法：
@@ -92,8 +93,9 @@
     4. 听到`3次滴声`后，松开两个按钮。（电源灯为`闪烁`状态）
     5. 检查Host PC是否有一个名为`Nvidia Crop. APX`的设备
 
-* 烧录方法：
-    详见Nvidia官方文档：https://docs.nvidia.com/sdk-manager/index.html
+* 相关资料：
+    Nvidia SDK Manager 简介：https://developer.nvidia.com/nvidia-sdk-manager
+    Nvidia SDK Manager 使用文档：https://docs.nvidia.com/sdk-manager/index.html
 
 ## EC升级
 
